@@ -33,13 +33,11 @@ django-project/
 └── manage.py                      # Django's command-line utility for administrative tasks
 ```
 
-
-
 ## Installation
 
-1. Clone the repository
-2. Navigate to the project directory
-3. Install dependencies
+1. Clone the repository: `git clone https://github.com/inskyeee/django-project.git`
+2. Navigate to the project directory: `cd django-project`
+3. Install dependencies: `pip install -r requirements.txt`
 4. Run migrations: `python manage.py migrate`
 5. Start the development server: `python manage.py runserver`
 
