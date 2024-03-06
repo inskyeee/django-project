@@ -1,0 +1,126 @@
+/* General style for all body-elements */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* White background */
+    color: #212121; /* Slightly off-black for text for better readability */
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Styles for our navigation bars  */
+.main-nav ul {
+    list-style-type: none;
+    padding: 0px 0px;
+    margin: 0px;
+    background-color: #240f6e; /* Deep blue background */
+    overflow: hidden;
+}
+
+.main-nav ul li {
+    float: left; /* Aligns navigation items horizontally */
+}
+
+.main-nav ul li a {
+    display: block; /* Makes the entire area clickable */
+    color: white; /* Text color for better contrast against the background */
+    text-align: center; /* Centers the text within the navigation item */
+    padding: 26px 32px;
+    text-decoration: none; 
+}
+
+.main-nav ul li a:hover, .active {
+    border-bottom: 2px solid #fff;
+    font-weight: 700;
+    background-color: #1a0d5c; /* A slightly darker shade of #211069 (our main color) for hover effect */
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff; /* Keeping sections white for a clean look */
+    border: 1px solid #ddd; /* Light border to define sections */
+}
+
+/* Heading Styles */
+h1 {
+    color: #240f6e; /* Using the deep blue for headings */
+}
+
+/* Form Styles */
+label {
+    color: #212121; /* Slightly off-black for better readability */
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="email"], textarea, select {
+    width: 100%; /* Ensures input fields take up the full container width */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Button Styles */
+input[type="submit"], button {
+    background-color: #240f6e; /* Deep blue background */
+    color: white; /* White text */
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #1a0d5c; /* Darker shade for hover */
+}
+
+
+/* Footer Styles */
+.main-footer {
+    text-align: center; /* Centers the footer text */
+    padding: 10px 0px;
+    background-color: #160943; /* Deep blue background */
+    color: white; /* Text color for contrast */
+    margin: 0px;
+}
+
+/* Style for indicating required fields */
+.required {
+    color: red;
+}
+
+
+.thank-you-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.thank-you-container h1 {
+    color: #211069;
+    margin-bottom: 20px;
+}
+
+.thank-you-container p {
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.return-home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #211069;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.return-home-btn:hover {
+    background-color: #5643b5;
+    transition: 0.75s;
+    
+}

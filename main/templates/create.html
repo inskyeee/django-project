@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Collection - Student Progress Tracker</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <!-- Navigation Bar: Allows users to navigate between different pages -->
+    <nav class="main-nav">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">Information</a></li>
+            <li><a href="/create" class="active">Data Collection</a></li>
+        </ul>
+    </nav>
+
+    <!-- Data Collection Form Section -->
+    <section class="data-collection-section">
+        
+        <h1>Student Progress Questionnaire</h1>
+        <p>Please fill out this questionnaire to help us assess and improve student experiences and outcomes.</p>
+        <!-- When the form is submited we will redirect person on thankyou.html file -->
+        <!-- Note: As we dont have any backend for now, we are using get method, but when we'll use flask - it will be post -->
+        <form id="student-progress-form" action="/thankyou" method="post">
+            {% csrf_token %}
+            <!-- {{ form.as_p }} -->
+            <div class="form-group">
+                <label for="name">Name: <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required> <!-- Text input for the name, marked as required -->
+            </div>
+            <div class="form-group">
+                <label for="student-number">Student Number: <span class="required">*</span></label>
+                <input type="text" id="student-number" name="student_number" required> <!-- Text input for the student number, marked as required -->
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address: <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required> <!-- Email input for the email address, marked as required -->
+                <!-- Additionally, the line above checks whether the email address format is entered correctly. -->
+            </div>
+            <div class="form-group">
+                <label for="grades">Grades obtained in courses (Please list): <span class="required">*</span></label>
+                <textarea id="grades" name="grades" rows="4" required></textarea> <!-- Textarea for inputting grades, marked a  s required -->
+            </div>
+            <div class="form-group">
+                <label for="satisfaction">Overall satisfaction with the academic experience:</label>
+                <select id="satisfaction" name="satisfaction"> <!-- Dropdown select for satisfaction level -->
+                    <option value="none" disabled selected>Click to select</option>
+                    <option value="very_satisfied">Very Satisfied</option>
+                    <option value="satisfied">Satisfied</option>
+                    <option value="neutral">Neutral</option>
+                    <option value="dissatisfied">Dissatisfied</option>
+                    <option value="very_dissatisfied">Very Dissatisfied</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="improvements">Suggestions for improvement:</label>
+                <textarea id="improvements" name="improvements" rows="4"></textarea> <!-- Textarea for inputting suggestions for improvement -->
+            </div> 
+            <button type="submit" class="submit-btn">Submit</button> <!-- Submission button for the form -->
+        </form>
+    </section>
+
+    <!-- Footer: Displays copyright information. Additionally, we can add some contact information here -->
+    <footer class="main-footer">
+        <p>University Name © 2024. All rights reserved.</p>
+    </footer>
+</body>
+</html>
